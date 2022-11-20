@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CupheadTAS.Commands;
 using CupheadTAS.Utils;
 using HarmonyLib;
 using Mono.Cecil.Cil;
@@ -87,7 +88,7 @@ public class FixedRandom : PluginComponent {
     }
 
     private static void FixedRandomState(params object[] objects) {
-        List<object> seeds = new(objects) {SceneLoader.SceneName};
+        List<object> seeds = new(objects) {SceneLoader.SceneName + SeedCommand.Seed};
         if (!CupheadGame.Instance.IsLoading) {
             if (Level.Current is { } level) {
                 seeds.Add(level.LevelTime.ToCeilingFrames());

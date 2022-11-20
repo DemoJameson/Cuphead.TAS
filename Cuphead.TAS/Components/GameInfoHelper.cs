@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CupheadTAS.Commands;
 using CupheadTAS.Utils;
 using HarmonyLib;
 using Mono.Cecil.Cil;
@@ -250,7 +251,7 @@ public class GameInfoHelper : PluginComponent {
                 }
 
                 infos.Add(statuses.Join(delimiter: " "));
-                infos.Add($"{game.CurrentTime}");
+                infos.Add($"{game.CurrentTime} Seed: {SeedCommand.Seed}");
                 infos.Add($"[{game.LevelName}]");
 
                 lastTime = game.CurrentTime;
@@ -345,7 +346,7 @@ public class GameInfoHelper : PluginComponent {
                 }
 
                 infos.Add(statuses.Join(delimiter: " "));
-                infos.Add($"{game.CurrentTime}");
+                infos.Add($"{game.CurrentTime} Seed: {SeedCommand.Seed}");
                 infos.Add($"[{game.LevelName}]");
 
                 lastTime = game.CurrentTime;
