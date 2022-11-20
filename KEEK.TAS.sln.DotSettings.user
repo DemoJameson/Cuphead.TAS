@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CGames_005CSteam_005Csteamapps_005Ccommon_005CCeleste_005CResource_005CCode_005CKEEK_002ETAS_005CCore_005Clibs_002Dstripped_005CJ2i_002ENet_002EXInputWrapper_002Dnstrip_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CGames_005CSteam_005Csteamapps_005Ccommon_005CCeleste_005CResource_005CCode_005CKEEK_002ETAS_005CKEEK_002ETAS_005Clibs_002Dstripped_005CUnityEngine_002Dnstrip_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CGames_005CSteam_005Csteamapps_005Ccommon_005CCeleste_005CResource_005CCode_005CKEEK_002ETAS_005CKEEK_002ETAS_005Clibs_002Dstripped_005CUnityEngine_002ECoreModule_002Dnstrip_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CRiderProjects_005CKEEK_002ETAS_005CKEEK_002ETAS_005Clibs_002Dstripped_005CUnityEngine_002Dnstrip_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CRiderProjects_005CKEEK_002ETAS_005CKEEK_002ETAS_005Clibs_002Dstripped_005CUnityEngine_002EPhysics2DModule_002Dnstrip_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="D:\RiderProjects\KEEK.TAS\TAS.Core\libs-stripped\J2i.Net.XInputWrapper.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</wpf:ResourceDictionary>
