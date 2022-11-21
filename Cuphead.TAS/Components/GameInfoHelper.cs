@@ -28,6 +28,7 @@ public class GameInfoHelper : PluginComponent {
     private static int exPlaneDelayFrames;
     private static readonly List<string> infos = new();
     private static readonly List<string> statuses = new();
+    private static string seed => SeedCommand.Seed == "" ? "" : $" Seed: {SeedCommand.Seed}";
 
     [HarmonyPatch(typeof(AbstractLevelWeapon), nameof(AbstractLevelWeapon.fireWeapon_cr), MethodType.Enumerator)]
     [HarmonyPatch(typeof(AbstractLevelWeapon), nameof(AbstractLevelWeapon.chargeFireWeapon_cr), MethodType.Enumerator)]
@@ -251,7 +252,7 @@ public class GameInfoHelper : PluginComponent {
                 }
 
                 infos.Add(statuses.Join(delimiter: " "));
-                infos.Add($"{game.CurrentTime} Seed: {SeedCommand.Seed}");
+                infos.Add($"{game.CurrentTime}{seed}");
                 infos.Add($"[{game.LevelName}]");
 
                 lastTime = game.CurrentTime;
@@ -346,7 +347,7 @@ public class GameInfoHelper : PluginComponent {
                 }
 
                 infos.Add(statuses.Join(delimiter: " "));
-                infos.Add($"{game.CurrentTime} Seed: {SeedCommand.Seed}");
+                infos.Add($"{game.CurrentTime}{seed}");
                 infos.Add($"[{game.LevelName}]");
 
                 lastTime = game.CurrentTime;

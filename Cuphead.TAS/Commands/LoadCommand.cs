@@ -19,6 +19,12 @@ public class LoadCommand : PluginComponent {
             return;
         }
 
+        if (SceneLoader.currentlyLoading) {
+            Toast.Show("Load Command Failed\nCannot be run when loading scene");
+            Manager.DisableRunLater();
+            return;
+        }
+
         if (sceneName is "scene_title" or "scene_slot_select") {
             PlayerManager.ResetPlayers();
         }

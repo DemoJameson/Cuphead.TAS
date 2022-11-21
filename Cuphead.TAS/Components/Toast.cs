@@ -23,7 +23,7 @@ public class Toast : PluginComponent {
     }
 
     private static IEnumerator ClearToast() {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         instance.text = "";
     }
 
