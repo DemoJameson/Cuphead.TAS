@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net35</TargetFramework>
         <Description>TAS mod for Cuphead</Description>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
@@ -16,6 +16,8 @@
         <PackageVersion>1.0.0</PackageVersion>
         <Configurations>v134;v100;v124</Configurations>
         <Platforms>AnyCPU</Platforms>
+        <AssemblyVersion>1.0.1</AssemblyVersion>
+        <FileVersion>1.0.1</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'v100' ">
