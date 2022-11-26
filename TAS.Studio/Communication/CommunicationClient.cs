@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GodSharp.Sockets;
@@ -23,6 +24,7 @@ public static class CommunicationClient {
             OnConnected = c => {
                 Console.WriteLine($"{c.RemoteEndPoint} connected.");
                 Task.Run(() => {
+                    Thread.Sleep(100);
                     SendMessage(new PathMessage(Studio.CurrentFileName ?? ""));
                 });
             },

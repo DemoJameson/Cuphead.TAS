@@ -96,7 +96,7 @@ public static class Manager {
                 States |= States.FrameStep;
                 return;
             }
-            
+
             SendStateToStudio();
 
             bool continueLoop = Hotkeys.FrameAdvance.Pressed;

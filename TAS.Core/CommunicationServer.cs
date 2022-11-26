@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using GodSharp.Sockets;
 using TAS.Core.Hotkey;
@@ -22,6 +23,7 @@ public static class CommunicationServer {
                 Console.WriteLine($"{c.RemoteEndPoint} connected.");
                 
                 Task.Run(()=> {
+                    Thread.Sleep(100);
                     SendMessage(new HotkeySettingsMessage(Hotkeys.KeysInteractWithStudio));
                 });
             },

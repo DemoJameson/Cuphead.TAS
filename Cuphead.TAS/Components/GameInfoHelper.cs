@@ -178,7 +178,7 @@ public class GameInfoHelper : PluginComponent {
                 if (Level.Current is {type: Level.Type.Battle, timeline: {health: > 0f} timeline}) {
                     float totalHealth = timeline.health;
                     float currentHealth = totalHealth - timeline.damage - overDamage;
-                    string boss = $"Boss:  {currentHealth:F2} {overDamage:F2}";
+                    string boss = $"Boss:  {currentHealth:F2}";
 
                     List<Level.Timeline.Event> events = timeline.events;
 
@@ -188,7 +188,6 @@ public class GameInfoHelper : PluginComponent {
                         if (currentHealth > nextPhaseHealth) {
                             if (lastEventIndex != index) {
                                 overDamage = currentHealth - totalHealth * events[lastEventIndex].percentage;
-                                Debug.LogWarning(lastEventIndex + ": " + overDamage);
                             }
 
                             lastEventIndex = index;
