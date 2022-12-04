@@ -97,8 +97,6 @@ public static class Manager {
                 return;
             }
 
-            SendStateToStudio();
-
             bool continueLoop = Hotkeys.FrameAdvance.Pressed;
 
             while (States.HasFlag(States.Enable)) {
@@ -180,10 +178,6 @@ public static class Manager {
 
     // Called on frame end e.g. Unity component.LateUpdate
     public static void SendStateToStudio() {
-        if (UltraFastForwarding && Game.FrameCount % 13 > 0) {
-            return;
-        }
-
         GameInfoMessage gameInfoMessage = new(
             Controller.Previous?.Line ?? -1,
             $"{Controller.CurrentFrameInInput}{Controller.Previous?.RepeatString ?? ""}",

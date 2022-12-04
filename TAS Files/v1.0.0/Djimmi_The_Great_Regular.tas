@@ -1,14 +1,13 @@
-RecordCount: 513
+RecordCount: 514
         
 Difficulty Regular
 Super None
 Charm Whetstone
 
 Load scene_level_flying_genie
- 244
+ 248
 
-   2,R,S
-   6,R,U,S
+   4,R,U,S
   45,R,S
    1,R,S,W
    1,R,S
@@ -275,4 +274,4 @@ EndRepeat
  380
  560
 
-Time: 00:44.733(2684)
+Time: 00:44.749(2685)
