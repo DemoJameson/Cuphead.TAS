@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Logging;
 using CupheadTAS.Components;
 using HarmonyLib;
+using Rewired;
 using TAS;
 using TAS.Core;
 using TAS.Core.Hotkey;
@@ -24,13 +24,13 @@ public class Plugin : BaseUnityPlugin {
     }
 
     private void Update() {
-        StartCoroutine(EndOfFrame());
+        Hotkeys.AllowKeyboard = Application.isFocused || !CommunicationServer.Connected;
     }
 
-    private IEnumerator EndOfFrame() {
-        yield return new WaitForEndOfFrame();
+    [HarmonyPatch(typeof(InputManager_Base), "Update")]
+    [HarmonyPrefix]
+    private static bool InputManagerBaseUpdate() {
         Manager.Update();
-        Manager.SendStateToStudio();
-        Hotkeys.AllowKeyboard = Application.isFocused || !CommunicationServer.Connected;
+        return !Manager.Running;
     }
 }

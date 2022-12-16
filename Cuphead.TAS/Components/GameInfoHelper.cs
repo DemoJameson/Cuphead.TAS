@@ -157,8 +157,7 @@ public class GameInfoHelper : PluginComponent {
         get {
             CupheadGame game = CupheadGame.Instance;
 
-            if (lastLevelName == CurrentSceneName && lastTime == game.CurrentTime || PlayerManager.players == null) {
-                lastLevelName = CurrentSceneName;
+            if (lastTime == game.CurrentTime || PlayerManager.players == null) {
                 return lastInfo;
             }
 
