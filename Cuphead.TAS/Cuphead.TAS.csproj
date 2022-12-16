@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net35</TargetFramework>
         <Description>TAS mod for Cuphead</Description>
-        <Version>1.0.3</Version>
+        <Version>1.1.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
@@ -13,11 +13,11 @@
         <RootNamespace>CupheadTAS</RootNamespace>
         <PathMap>$(MSBuildProjectDirectory)=Cuphead.TAS/</PathMap>
         <PackageId>Cuphead.TAS</PackageId>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>1.1.0</PackageVersion>
         <Configurations>v134;v100;v124</Configurations>
         <Platforms>AnyCPU</Platforms>
-        <AssemblyVersion>1.0.3</AssemblyVersion>
-        <FileVersion>1.0.3</FileVersion>
+        <AssemblyVersion>1.1.0</AssemblyVersion>
+        <FileVersion>1.1.0</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'v100' ">
