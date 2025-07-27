@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net35</TargetFramework>
         <Description>TAS mod for Cuphead</Description>
-        <Version>1.1.0</Version>
+        <Version>1.1.1</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
@@ -13,11 +13,11 @@
         <RootNamespace>CupheadTAS</RootNamespace>
         <PathMap>$(MSBuildProjectDirectory)=Cuphead.TAS/</PathMap>
         <PackageId>Cuphead.TAS</PackageId>
-        <PackageVersion>1.1.0</PackageVersion>
+        <PackageVersion>1.1.1</PackageVersion>
         <Configurations>v134;v100;v124</Configurations>
         <Platforms>AnyCPU</Platforms>
-        <AssemblyVersion>1.1.0</AssemblyVersion>
-        <FileVersion>1.1.0</FileVersion>
+        <AssemblyVersion>1.1.1</AssemblyVersion>
+        <FileVersion>1.1.1</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'v100' ">
@@ -95,7 +95,7 @@
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Condition="'$(Configuration)' == 'v134'" Command="xcopy $(SolutionDir)BepInex\BepInex_x64 $(SolutionDir)out\Cuphead_$(Configuration) /E/H/C/I/Y" />
         <Exec Condition="'$(Configuration)' != 'v134'" Command="xcopy $(SolutionDir)BepInex\BepInex_x86 $(SolutionDir)out\Cuphead_$(Configuration) /E/H/C/I/Y" />
-        <Exec Command="xcopy $(SolutionDir)TAS.Studio\bin\v100\net452 $(SolutionDir)out\Cuphead_$(Configuration)\TAS.Studio /E/H/C/I/Y" />
+        <Exec Command="xcopy $(SolutionDir)TAS.Studio\bin\$(Configuration)\net452 $(SolutionDir)out\Cuphead_$(Configuration)\TAS.Studio /E/H/C/I/Y" />
         <Exec Command="xcopy &quot;$(TargetDir)&quot; &quot;$(SolutionDir)out\Cuphead_$(Configuration)\BepInEx\plugins\Cuphead.TAS&quot; /E/H/C/I/Y" />
         <Exec Command="powershell -Command Compress-Archive -Path '$(SolutionDir)out\Cuphead_$(Configuration)\*' -DestinationPath '$(SolutionDir)out\Cuphead_$(Configuration)_TAS_v$(Version).zip' -Force" />
     </Target>
